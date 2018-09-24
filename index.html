@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="./styles/trashy/trashy.css" />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <script async type="module" src="./js/components/task-app.js"></script>
+    <script async type="module" src="./js/components/task-form.js"></script>
+    <script async type="module" src="./js/components/task-list.js"></script>
+    <script async type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <!-- TEMPLATE DEFINITIONS -->
+    <template id="task-app__template">
+      <task-form></task-form>
+      <task-list></task-list>
+    </template>
+
+    <template id="task-form__template">
+      <label for="taskDefinition">Define Task</label>
+      <input id="taskDefinition" type="text" />
+      <button type="button">Submit</button>
+    </template>
+
+    <template id="task-list__template">
+      <ul></ul>
+    </template>
+
+    <template id="progress-bar__template">
+      <style>
+        :host {
+          height: 30px;
+          display: block;
+          background-color: #EDF2F4;
+          border-radius: 5px;
+          color: #fff;
+        }
+
+        .progress-bar__inner {
+          height: 100%;
+          line-height: 30px;
+          background-color: #2B2D42;
+          text-align: center;
+          border-radius: 5px;
+          transition: width 0.25s;
+        }
+      </style>
+
+      <div class="progress-bar__inner"></div>
+    </template>
+  </body>
+</html>
